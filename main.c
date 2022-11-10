@@ -1,7 +1,7 @@
 /* 
  * COMP201 - Assignment2
  * 
- * <Please put your name and userid here>
+ * <Ali Mete Sevinçli 0079675>
  * 
  * main.c - Source file with your solutions to the assignment.
  *
@@ -18,9 +18,43 @@
 
 
 bool isValidIP(char input[]) {
+    char val[] = "1234567890."; 
+    int i;
+    int a;
+    int flag = 0;
+    int c = strlen(input);
+    for(i = 0; i < strlen(input);i++){
+      for(a = 0; a < strlen(val);a++){
+        if(input[i] == val[a]){
+          flag = 1;
+        }
+      }
+      if(flag == 0){
+        return false;
+      }
+      flag = 0;
+    }
+    char* subs = strtok(input, ".");
+    while (subs != NULL) {
+        int numb = atoi(subs);
+        if(numb > 255){
+            return false;
+        }
+        if(strlen(subs) != 1){
+          char zero[2] = "0";
+          if(subs[0] == zero[0]){
+            return false;
+          }
+          
+        }
+        
+        subs = strtok(NULL, ".");
+    }
+    
+    
     // Your code here
 
-    return true;
+    return true; 
 }
 
 char *toHex(char input[]) {
