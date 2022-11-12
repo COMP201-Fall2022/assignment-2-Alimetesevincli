@@ -58,15 +58,86 @@ bool isValidIP(char input[]) {
 }
 
 char *toHex(char input[]) {
-    // Your code here
+  long decimalnum, quotient, remainder;
+  int i, j = 0;
+  char hexadecimalnum[100];
+  char* subs = strtok(input, ".");
+  int counter = 0;
+  char sub_part2[20];
+  char sub_part3[3];
 
-    return input;
+    
+  while (subs != NULL) {
+    
+    int numb = atoi(subs);
+    quotient = numb;
+    subs = strtok(NULL, ".");
+    while (quotient != 0)
+    {
+        remainder = quotient % 16;
+        if (remainder < 10)
+            hexadecimalnum[j++] = 48 + remainder;
+        else
+            hexadecimalnum[j++] = 55 + remainder;
+        quotient = quotient / 16;
+    }
+    char sub_part[4];
+
+    for (i = j; i >= 0; i--){
+            sub_part[j-i] =hexadecimalnum[i];
+      }
+    
+
+    if(counter == 0){
+      sub_part2[0] = sub_part[1];
+      sub_part2[1] = sub_part[2];
+      sub_part2[2] = '.';
+      sub_part2[3] = '\0';
+    }
+    else if(counter == 3){
+      char sub_part3[3];
+      sub_part3[0] = sub_part[1];
+      sub_part3[1] = sub_part[2];
+      sub_part3[2] = '\0';
+      strcat(sub_part2,sub_part3);
+    } 
+    else{
+      char sub_part3[4];
+      sub_part3[0] = sub_part[1];
+      sub_part3[1] = sub_part[2];
+      sub_part3[2] = '.';
+      sub_part3[3] = '\0';
+      strcat(sub_part2,sub_part3);
+    }
+    counter += 1;
+} 
+  
+  
+  
+  int o;
+  char final_1[strlen(sub_part2+1)];
+  int p = strlen(sub_part2);
+  for(o = 0; o < p; o++){
+    input[o] = sub_part2[o];
+  }
+  int m = strlen(input);
+  for(o; o < m; o++){
+    input[o] = '\0';
+  }
+  return input; 
+
 }
 
 bool checkQuery(char query[], char IP[]) {
     // Your code here
-
+    
+  int length = strlen(query);
+  if(strncmp(query, IP, length) == 0){
+    return true;
+  }
+  else{
     return false;
+  }
     }
 
 char *modifyIP(char search_num[], char IP[],char new_num[]) {
