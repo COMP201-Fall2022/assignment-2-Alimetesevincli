@@ -142,7 +142,39 @@ bool checkQuery(char query[], char IP[]) {
 
 char *modifyIP(char search_num[], char IP[],char new_num[]) {
     // Your code here
-
+    
+    int len_s = strlen(search_num);
+    int len_n = strlen(new_num);
+    int len = strlen(IP);
+    if(len_s == len_n){
+      int i, a, s;
+      int counter = 0;
+      int flag = 0;
+      for(i = 0; i < len; i++){
+        for(a = 0; a < len_s;a++){
+          int z = (a+i);
+          if(IP[z] == search_num[a]){
+            for(z; z < (a+i+len_s);z++ ){
+              if(IP[z] == search_num[z-i]){
+                counter +=1;
+              }
+            }
+            if(counter == strlen(search_num)){
+               s = i;
+               for(s = i; s<(i+len_s); s++ ){
+                 IP[s] = new_num[s-i];
+               }
+               break;
+               
+          
+        }
+        counter = 0;
+          }
+          
+        }
+        
+      } 
+    }
     return IP;
 }
 
