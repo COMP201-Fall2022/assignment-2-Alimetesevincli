@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "test&#35;2",
+      "setup": "gcc main.c -std=c99 -o main_out ",
+      "run": "./main_out",
+      "input": "",
+      "output": "number of IP inputs 100\r\nnumber of query IP inputs 12\r\nc0.97.a1.1e\r\n48.30.a4.40\r\n37.ba.89.1d\r\n95.0.94.4d\r\n2.59.8.ee\r\nc0.62.f0.52\r\n35.ea.d1.b3\r\nc0.a8.f.94\r\nc0.be.59.15\r\nf4.85.dd.f1\r\nc0.a8.b0.a7\r\nc0.d.2d.e8\r\nc0.a8.2.db\r\nc0.c6.a6.1d\r\nc0.a8.89.29\r\n31.c9.7c.50\r\n96.9f.8c.80\r\nc0.e2.53.3a\r\nc0.a8.88.c2\r\nbf.e9.1b.cc\r\nc0.33.11.fd\r\n95.23.f6.c4\r\nc0.db.29.39\r\ndb.4d.b8.35\r\nc0.a8.2.e6\r\nc0.75.d2.cd\r\n98.f5.ed.cb\r\nc0.a8.1b.90\r\na3.c0.a1.4e\r\nc0.76.63.db\r\n52.95.aa.ea\r\nb.69.d5.23\r\nd2.2d.40.39\r\nc0.a8.14.ef\r\nc0.ae.2e.1d\r\n7f.bf.30.61\r\nc0.d3.e7.a6\r\nc0.a8.eb.5\r\nc0.a8.2.82\r\n7a.6c.c0.4b\r\ndb.6b.e4.44\r\nc0.7.86.4b\r\n62.71.87.44\r\n18.1a.ea.37\r\nc0.a8.d0.f5\r\n84.f.5f.31\r\nc0.bd.6e.9f\r\nb8.d6.be.d0\r\n63.db.e9.a1\r\nc0.21.48.ae\r\n16.2b.5.3d\r\nb9.fb.43.e6\r\n4c.9d.92.c6\r\nc0.d1.76.ac\r\nc0.a8.2.1f\r\nc0.a8.31.10\r\n82.46.b9.6a\r\nc0.85.67.82\r\ncf.bf.3a.13\r\n2d.3c.82.a0\r\nc0.a8.25.18\r\nc0.b9.5d.5b\r\n87.ad.56.a3\r\ne8.68.2.d7\r\n6b.df.f2.f1\r\nc0.2.86.48\r\nc0.a8.ef.d6\r\nc5.ff.cc.ea\r\n82.5.13.cf\r\n56.96.1d.89\r\nc0.43.4b.ad\r\nc0.8.54.bc\r\n5b.53.a1.d0\r\nc0.a8.be.44\r\n\r\n*******\r\n\r\nnumber of valid IPs: 74\r\n\r\n*******\r\nQuery statistics are:\r\n\r\n37\r\n16\r\n5\r\n4\r\n1\r\n1\r\n1\r\n1\r\n1\r\n0\r\n0\r\n0\r\n\r\nModification test cases are:\r\n\r\n48.30.a4.40\r\n45.40.a4.40\r\n37.ba.89.1d\r\n37.ba.89.1d\r\n95.0.94.4d\r\n95.0.94.4d\r\n2.59.8.ee\r\n25.a.22.f",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
